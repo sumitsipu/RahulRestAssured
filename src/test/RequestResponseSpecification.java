@@ -67,7 +67,8 @@ public class RequestResponseSpecification {
         @Test
         public void getPlace () {
 
-        GetPlace getPlaceResponse = given()
+            System.out.println("new chnage for git");
+            GetPlace getPlaceResponse = given()
                     .spec(new RequestSpecBuilderClass().getRequestSpecification())
                     .queryParam("place_id", addPlace())
                 .when()
@@ -79,10 +80,10 @@ public class RequestResponseSpecification {
                     .as(GetPlace.class); //pojo class specific //deserialization
 
 //        JsonPath js1 = ReuseMethods.stringToJson(getResponse);
-        System.out.println(getPlaceResponse.getAccuracy());
-        System.out.println(getPlaceResponse.getAddress());
-        System.out.println(getPlaceResponse.getLocation().getLatitude());
-        System.out.println((getPlaceResponse.getLocation().getLongitude()));
+            System.out.println(getPlaceResponse.getAccuracy());
+            System.out.println(getPlaceResponse.getAddress());
+            System.out.println(getPlaceResponse.getLocation().getLatitude());
+            System.out.println((getPlaceResponse.getLocation().getLongitude()));
 
     }
 
