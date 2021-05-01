@@ -68,6 +68,7 @@ public class RequestResponseSpecification {
         public void getPlace () {
 
             System.out.println("new chnage for git");
+            System.out.println("Change frpm second guy");
             GetPlace getPlaceResponse = given()
                     .spec(new RequestSpecBuilderClass().getRequestSpecification())
                     .queryParam("place_id", addPlace())
